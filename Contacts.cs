@@ -30,13 +30,15 @@ namespace AdressBook
             this.country = country;
             this.phone = phone;
             this.email = email;
-
-             
-           Console.WriteLine("Name of the Person {0}{1}, Adress is :{2}, his from {3} city and {4} sate.pincode is {5} His from {6}", firstName, lastName, address, city, state,zip, country);
-           Console.WriteLine("His Number is {0} and emails is {1}", phone, email);
             
 
         }
+         public void Display()
+        {
+            Console.WriteLine("Name of the Person {0}{1}, Adress is :{2}, his from {3} city and {4} sate.pincode is {5} His from {6}", firstName, lastName, address, city, state, zip, country);
+            Console.WriteLine("His Number is {0} and emails is {1}", phone, email);
+        }
+       
        
     } 
 }
