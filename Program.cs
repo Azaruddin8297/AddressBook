@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Welcome to Address Book Program");
             AddressProgram contact = new AddressProgram();
-           // contact.details();
+            contact.details();
             contact.deleteContact();
            
         }
