@@ -91,5 +91,21 @@ namespace AddressBookMangement
 
 
         }
+        public void deleteContact()
+        {
+            Address address = new Address();
+            Console.WriteLine("Enter name to delete details");
+            String name = Console.ReadLine();
+            foreach (var data in list)
+            {
+                if (data.firstname.Equals(name))
+                    address = data;
+
+            }
+            list.Remove(address);
+            Console.WriteLine("contact was deleted" + address.firstname + "\n" + address.lastname + "\n" + address.address + "\n" + address.city + "\n" + address.state + "\n" + address.phoneNo + "\n" + address.postcode + "\n" + address.country + "\n" + address.eMail);
+
+
+        }
     }
 }
