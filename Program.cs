@@ -1,12 +1,12 @@
-﻿namespace AdressBook
+namespace AddressBookMangement
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Welcom to the Adderess Book");
-
-                   
+            Console.WriteLine("Welcome to Address Book Program");
+            
+           
         }
     }
 }
