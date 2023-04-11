@@ -8,14 +8,19 @@ namespace AddressBookMangement
 {
     public class Address
     {
-        public string firstname { get; set; }
-        public string lastname { get; set; }
-        public string address { get; set; }
-        public string city { get; set; }
-        public string state { get; set; }
-        public string postcode { get; set; }
-        public string country { get; set; }
-        public string phoneNo { get; set; }
-        public string eMail { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Addres { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string Zip { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Email { get; set; }
+        public void Print()
+        {
+            Console.WriteLine(this.FirstName + this.LastName);
+        }
     }
+   
+
 }
