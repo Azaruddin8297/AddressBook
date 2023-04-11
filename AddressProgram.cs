@@ -127,6 +127,31 @@ namespace AddressBookMangement
                 }
             }
         }
+        public void Search_person_city_state()
+        {
+            Console.WriteLine("Search a Person by 1.city 2.state");
+            int choice = Convert.ToInt32(Console.ReadLine());
+            switch (choice)
+            {
+                case 1:
+                    Console.WriteLine("Enter The City Name to search");
+                    string city = Console.ReadLine();
+                    foreach (Address contact in this.addresslist.FindAll(e => e.City == city))
+                    {
+                        Console.WriteLine(contact.FirstName + " " + contact.LastName + " is from " + contact.City);
+                    }
+                    break;
+                case 2:
+                    Console.WriteLine("Enter The state Name to search");
+                    string state = Console.ReadLine();
+                    foreach (Address contact in this.addresslist.FindAll(e => e.State == state))
+                    {
+                        Console.WriteLine(contact.FirstName + " " + contact.LastName + " is from " + contact.State);
+                    }
+                    break;
+
+            }
+        }
 
     }
 }

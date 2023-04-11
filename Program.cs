@@ -10,7 +10,7 @@
             while (flag)
             {
                 Console.WriteLine("\nWelcome to Address Book Program!!!");
-                Console.WriteLine("Choose an Option Execute Program\n 1.CreateContact\n 2.AddContact\n 3.EditContact\n 4.DeleteCOntact\n 5.MultipleAddressBook\n 6.Exit\n ");
+                Console.WriteLine("Choose an Option Execute Program\n 1.CreateContact\n 2.AddContact\n 3.EditContact\n 4.DeleteCOntact\n 5.MultipleAddressBook\n 6.SearchbyCityorState\n 7.Exit\n ");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -56,6 +56,9 @@
                         addressBook.DisplayAddressBook();
                         break;
                     case 6:
+                        addressBook.Search_person_city_state();
+                        break;
+                    case 7:
                         flag = false;
                         break;
                     default:
