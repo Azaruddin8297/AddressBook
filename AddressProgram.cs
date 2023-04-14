@@ -151,6 +151,64 @@ namespace AddressBookMangement
                     break;
 
             }
+
+        }
+        public void Count_person_city_state()
+        {
+            int count = 0;
+            Console.WriteLine("Enter your Choice for Searching a Person in");
+            Console.WriteLine("\n1.City \n2.State");
+            int option = Convert.ToInt32(Console.ReadLine());
+            switch (option)
+            {
+                case 1:
+                    Console.WriteLine("Enter your City");
+                    String city = Console.ReadLine();
+                    foreach (Address personal_Details in this.addresslist.FindAll(c => c.City == city))
+                    {
+                        count = this.addresslist.Count();
+                    }
+                    Console.WriteLine(count);
+                    break;
+                case 2:
+                    Console.WriteLine("Enter your State");
+                    String state = Console.ReadLine();
+                    foreach (Address personal_Details in this.addresslist.FindAll(c => c.State == state))
+                    {
+                        count = this.addresslist.Count();
+                    }
+                    Console.WriteLine(count);
+                    break;
+            }
+
+        }
+         
+        public void WriteFile()
+        {
+            Console.WriteLine("FileWriter");
+            string path = "D:\\C#\\AddressBookMangement\\AddressBookMangement\\file.txt";
+            using (StreamWriter sr = File.AppendText(path))
+            {
+                
+                foreach (var Adress in addresslist)
+                {
+                    sr.WriteLine("\nfirstname: " + Adress.FirstName + "\nlastname: " + Adress.LastName + "\naddress: " + Adress.Addres + "\ncity: " + Adress.City + "\nstate: " + Adress.State + "\nzip: " + Adress.Zip + "\nphoneno: " + Adress.PhoneNumber + "\nemail: " + Adress.Email);
+                }
+            }
+
+        }
+        public void ReadFile()
+        {
+            Console.WriteLine("The Contact List Using Stream Reader");
+            string path = "D:\\C#\\AddressBookMangement\\AddressBookMangement\\file.txt";
+            using (StreamReader se = File.OpenText(path))
+            {
+                string s = " ";
+                while ((s = se.ReadLine()) != null)
+                {
+                    Console.WriteLine(s);
+                }
+            }
         }
 
     }
